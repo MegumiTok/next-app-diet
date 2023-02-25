@@ -88,6 +88,17 @@ yarn add -D @commitlint/config-conventional @commitlint/cli
 npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$1"'
 ```
 
+## SVG ファイルを React コンポーネントとして import できるようになります
+
+```bash
+yarn add -D @svgr/webpack
+```
+
+参考にさせていただいたリンク:</br>
+[Next.js における SVG ファイルの表示方法を考える](https://zenn.dev/toono_f/articles/bd50ddd0a7bc76)
+
+※ 試そうと思いましたが storybook 側で反映させるのに別設定が必要っぽいのでひとまず保留
+
 ## その他使用する便利なライブラリ
 
 ```bash

@@ -1,3 +1,9 @@
 {
-  "cSpell.words": ["commitlint", "huskyrc", "storysource", "tailwindcss"]
+  "cSpell.words": [
+    "commitlint",
+    "huskyrc",
+    "storysource",
+    "svgr",
+    "tailwindcss"
+  ]
 }

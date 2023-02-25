@@ -35,7 +35,7 @@ const getSizeClasses = (size: string) => {
 
 const getModeClasses = (isPrimary: boolean) =>
   isPrimary
-    ? "text-white bg-blue_300 hover:bg-blue_400"
+    ? "text-white bg-blue_300 hover:bg-blue_500"
     : "text-white bg-green hover:bg-green/80";
 
 const BASE_BUTTON_CLASSES = "rounded-md font-bold cursor-pointer";
