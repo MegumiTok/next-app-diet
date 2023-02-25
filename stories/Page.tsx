@@ -5,7 +5,7 @@ import { Footer } from "./Footer";
 //type--------------
 import type { User } from "@/types";
 
-export const Page = () => {
+export const Page = ({ children }: { children: React.ReactNode }) => {
   const [user, setUser] = useState<User>();
   return (
     <article>
@@ -15,9 +15,7 @@ export const Page = () => {
         onLogout={() => setUser(undefined)}
         onCreateAccount={() => setUser({ name: "Meg" })}
       />
-      <section>
-        <h2>◇◆タイトル◆◇</h2>
-      </section>
+      <section className="pb-40">{children}</section>
 
       <Footer />
     </article>

@@ -1,6 +1,8 @@
 import Head from "next/head";
 // import { Inter } from "@next/font/google";
-import Center from "@/stories/Center";
+
+// components------------------------
+import { Page } from "@/stories/Page";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -14,9 +16,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <Center msg="ハロー" />
-      </main>
+      <Page>
+        <p>hello</p>
+      </Page>
     </>
   );
 }
