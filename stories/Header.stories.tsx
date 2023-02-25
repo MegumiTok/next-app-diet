@@ -21,11 +21,21 @@ export const Blue = Template.bind({});
 
 Blue.args = {
   bgColor: "#60a5fa",
+  logoColor: "#EA6C00",
 };
 
-export const Second = Template.bind({});
+export const Pink = Template.bind({});
 
-Second.args = {
+Pink.args = {
   bgColor: "#ed60fa",
-  logoColor: "#fff",
 };
+
+export const LoggedIn = Template.bind({});
+LoggedIn.args = {
+  user: {
+    name: "Meg",
+  },
+};
+
+export const LoggedOut = Template.bind({});
+LoggedOut.args = {};

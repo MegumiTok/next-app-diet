@@ -1,6 +1,14 @@
-// import Image from "next/image";
+import { Button } from "./Button";
+
+type User = {
+  name: string;
+};
 
 interface IHeader {
+  user?: User;
+  onLogin: () => void;
+  onLogout: () => void;
+  onCreateAccount: () => void;
   size?: number;
   bgColor?: string;
   logoColor?: string;
@@ -8,16 +16,20 @@ interface IHeader {
 
 export const Header: React.FC<IHeader> = ({
   size = 1.5,
-  bgColor = "#3F51B5",
-  logoColor = "#EA6C00",
+  bgColor = "#008feb", //blue_400
+  logoColor = "#fff",
+  user,
+  onLogin,
+  onLogout,
+  onCreateAccount,
 }) => {
   return (
     <header
       // className={`w-full p-5 bg-orange text-white ${className}`}
-      className="w-full p-5 text-white"
+      className="flex w-full p-5 text-white justify-between "
       style={{ backgroundColor: bgColor, fontSize: `${size}em` }}
     >
-      <div>
+      <div className=" place-self-center">
         <svg
           width="97"
           height="32"
@@ -38,6 +50,27 @@ export const Header: React.FC<IHeader> = ({
             fill={logoColor}
           />
         </svg>
+      </div>
+
+      <div>
+        {user ? (
+          <div>
+            <span className="text-white pr-8">
+              Welcome, <b>{user.name}</b>!
+            </span>
+            <Button size="small" onClick={onLogout} label="Log out" />
+          </div>
+        ) : (
+          <div>
+            <Button size="small" onClick={onLogin} label="Log in" />
+            <Button
+              primary
+              size="small"
+              onClick={onCreateAccount}
+              label="Sign up"
+            />
+          </div>
+        )}
       </div>
     </header>
   );

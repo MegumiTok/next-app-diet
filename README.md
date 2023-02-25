@@ -30,6 +30,9 @@ yarn add typescript@"<4.8"
 
 `main.js`と`preview.js`の両方設定を忘れずに(sb で tailwind が効かなくなる)
 
+▼ storybook を使うとコンポーネント単位でデザインの変更を気軽に試せて便利
+![Header](./public/readme/sb_header.png)
+
 ### addon の追加
 
 便利そうだなと思ったのをいくつか導入します

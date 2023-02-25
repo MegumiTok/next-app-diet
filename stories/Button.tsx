@@ -35,10 +35,10 @@ const getSizeClasses = (size: string) => {
 
 const getModeClasses = (isPrimary: boolean) =>
   isPrimary
-    ? "text-white bg-blue_300 hover:bg-blue_500"
+    ? "text-white bg-blue_300 hover:bg-blue_300/80"
     : "text-white bg-green hover:bg-green/80";
 
-const BASE_BUTTON_CLASSES = "rounded-md font-bold cursor-pointer";
+const BASE_BUTTON_CLASSES = "rounded-full font-bold cursor-pointer";
 
 export const Button = ({
   primary = false,
