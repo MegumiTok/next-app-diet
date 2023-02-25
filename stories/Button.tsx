@@ -1,49 +1,65 @@
-import React from "react";
-import "./button.css";
+import React, { useMemo } from "react";
+// import styles from './button.module.css';
 
+import classNames from "classnames";
 interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
   primary?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
+
+  color?: string;
+
   size?: "small" | "medium" | "large";
-  /**
-   * Button contents
-   */
+  // size?: 'small' | 'large';
+
   label: string;
+  type?: "button" | "submit" | "reset" | undefined;
   /**
    * Optional click handler
    */
-  onClick?: () => void;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  children?: any;
 }
 
-/**
- * Primary UI component for user interaction
- */
+const getSizeClasses = (size: string) => {
+  switch (size) {
+    case "small": {
+      return "px-4 py-2.5";
+    }
+    case "large": {
+      return "px-20 py-5";
+    }
+    default: {
+      return "px-8 py-3";
+    }
+  }
+};
+
+const getModeClasses = (isPrimary: boolean) =>
+  isPrimary
+    ? "text-white bg-blue_300 hover:bg-blue_400"
+    : "text-white bg-green hover:bg-green/80";
+
+const BASE_BUTTON_CLASSES = "rounded-md font-bold cursor-pointer";
+
 export const Button = ({
   primary = false,
   size = "medium",
-  backgroundColor,
+
+  color,
   label,
+  type,
   ...props
 }: ButtonProps) => {
-  const mode = primary
-    ? "storybook-button--primary"
-    : "storybook-button--secondary";
+  const computedClasses = useMemo(() => {
+    const modeClass = getModeClasses(primary);
+    const sizeClass = getSizeClasses(size);
+
+    return [modeClass, sizeClass].join(" ");
+  }, [primary, size]);
   return (
     <button
-      type="button"
-      className={["storybook-button", `storybook-button--${size}`, mode].join(
-        " "
-      )}
-      style={{ backgroundColor }}
+      type={type}
+      className={classNames(BASE_BUTTON_CLASSES, computedClasses)}
+      style={{ backgroundColor: color }}
       {...props}
     >
       {label}

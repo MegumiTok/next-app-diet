@@ -1,0 +1,43 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import { Button } from "./Button";
+
+# Button component
+
+`primary: true`とするとボタンの色は青色になります。
+
+<Meta component={Button} title="Button" />
+
+export const Template = (args) => <Button {...args} />;
+
+<Canvas>
+  <Story
+    name="Primary"
+    args={{
+      label: "Button",
+      primary: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Attributes
+
+<ArgsTable of={Button} />
+
+## サイズ、色、ラベル、ボタンのタイプを変更可能です。
+
+標準の色は緑とします。
+
+<Canvas>
+  <Story
+    name="Large"
+    args={{
+      size: "large",
+      label: "Large",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

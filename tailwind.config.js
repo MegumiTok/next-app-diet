@@ -4,16 +4,24 @@ module.exports = {
   // Ensure these match with .storybook/preview.js
   theme: {
     colors: {
-      blue: "#3F51B5",
       white: "#fff",
+
       green: "#84cc16",
-      gray: "#f1f5f9",
-      darkGray: "#9ca3af",
-      orange: "#C77700",
-      lightGray: "#fafafa",
-      border: "#e0e7ff",
-      stone: "#e7e5e4",
-      title: "#6b7280",
+
+      blue_300: "#8FE9D0",
+      blue_400: "#3F51B5",
+
+      gray_100: "#fafafa",
+      gray_200: "#f1f5f9",
+      gray_400: "#9CA3AF",
+      gray_500: "#777777",
+
+      orange_300: "#FFCC21", //yellow
+      orange_400: "#FF963C",
+      orange_500: "#EA6C00",
+
+      black_500: "#414141", // テキスト
+      black_600: "#2E2E2E",
     },
     screens: {
       xs: "375px",

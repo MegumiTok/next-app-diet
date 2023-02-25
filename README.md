@@ -7,6 +7,15 @@ yarn build
 yarn lint
 ```
 
+## Install Tailwind CSS with Next.js
+
+```bash
+yarn add -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+`npx tailwindcss init -p`でファイルが形成されたら設定を書き込む。
+
 ## storybook の導入
 
 ```bash
@@ -18,6 +27,8 @@ yarn add typescript@"<4.8"
 エラーの関係で typescript のバージョンは上のように指定。[^1]
 
 `yarn sb`で起動を確認
+
+`main.js`と`preview.js`の両方設定を忘れずに(sb で tailwind が効かなくなる)
 
 ### addon の追加
 
@@ -35,15 +46,6 @@ Docs has peer dependencies on react and babel-loader. If you want to write stori
 ```bash
 yarn add -D react babel-loader
 ```
-
-## Install Tailwind CSS with Next.js
-
-```bash
-yarn add -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-```
-
-`npx tailwindcss init -p`でファイルが形成されたら設定を書き込む。
 
 ## Prettier
 
