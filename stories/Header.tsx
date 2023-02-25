@@ -1,4 +1,10 @@
+import Link from "next/link";
+import { GiNotebook } from "react-icons/gi";
+import { AiOutlineInfoCircle } from "react-icons/ai";
+
+// component-------------
 import { Button } from "./Button";
+// type ----------------
 import type { User } from "@/types";
 
 interface IHeader {
@@ -26,6 +32,7 @@ export const Header: React.FC<IHeader> = ({
       className="flex w-full p-5 text-white justify-between"
       style={{ backgroundColor: bgColor, fontSize: `${size}em` }}
     >
+      {/* ロゴ ================================*/}
       <div className=" place-self-center">
         <svg
           width="261"
@@ -48,8 +55,34 @@ export const Header: React.FC<IHeader> = ({
           />
         </svg>
       </div>
+      {/* Nav =====================================*/}
+      <div className=" flex place-self-center ">
+        <div className="mx-10 flex ">
+          <GiNotebook size={55} color="#fff" className="mx-4"></GiNotebook>
+          <Link
+            href="/"
+            className="hover:text-4xl text-3xl text-white place-self-center"
+          >
+            記録する
+          </Link>
+        </div>
 
-      <div className="place-self-center">
+        <div className="mx-10 flex">
+          <AiOutlineInfoCircle
+            size={55}
+            color="#fff"
+            className="mx-4"
+          ></AiOutlineInfoCircle>
+          <Link
+            href="/"
+            className="hover:text-4xl text-3xl text-white place-self-center"
+          >
+            お知らせ
+          </Link>
+        </div>
+
+        {/* ログイン/サインアップ =====================================*/}
+
         {user ? (
           <div>
             <span className="text-white pr-8">
