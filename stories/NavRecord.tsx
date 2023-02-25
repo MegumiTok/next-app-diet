@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Marker } from "./Marker";
 import styles from "./NavRecord.module.css";
 
 const NavRecord = () => {
@@ -35,8 +36,11 @@ const NavCard: React.FC<INavCard> = ({ title, subTitle, image }) => {
         className="grayscale  w-80 object-cover"
       />
       <div className={styles.center}>
-        <p className="text-blue_500 font-bold text-xl">{title}</p>
-        <p className="bg-blue_300 text-white p-1"> {subTitle}</p>
+        <div className="flex flex-col  items-center  ">
+          <Marker text={title} size={2} />
+
+          <p className="bg-blue_300 text-white p-1"> {subTitle}</p>
+        </div>
       </div>
     </div>
   );

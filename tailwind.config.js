@@ -20,7 +20,7 @@ module.exports = {
       orange_400: "#FF963C",
       orange_500: "#EA6C00",
 
-      black_500: "#414141", // テキスト
+      black_500: "#3B4043", // テキスト
       black_600: "#2E2E2E",
     },
     screens: {

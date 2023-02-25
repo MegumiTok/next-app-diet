@@ -2,11 +2,14 @@ import DIARIES from "@/lib/local/diaries.json";
 
 // components-----------------------
 import { Button } from "./Button";
+import { Marker } from "./Marker";
+
 const DiaryList = () => {
   return (
     <div>
-      <p>日記</p>
-      <div className=" grid grid-cols-4 gap-3">
+      <Marker text="日記" size={3} />
+
+      <div className="grid grid-cols-4 gap-3">
         {DIARIES.map((diary, id) => {
           return <Diary key={id} diary={diary} />;
         })}

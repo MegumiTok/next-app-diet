@@ -1,0 +1,17 @@
+.under::after {
+  content: "";
+  position: absolute;
+  left: -5%;
+  top: 50%;
+  background-color: #ffc8dd;
+  width: 110%;
+  height: 35%;
+  z-index: -1;
+}
+
+.under {
+  font-size: 3em;
+  display: inline-block;
+  left: 1%;
+  transform: translateX(-1%);
+}

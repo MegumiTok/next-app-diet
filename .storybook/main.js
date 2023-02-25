@@ -1,3 +1,5 @@
+const prettierConfig = require("../.prettierrc.json");
+
 const path = require("path");
 module.exports = {
   stories: [
