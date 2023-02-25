@@ -111,15 +111,18 @@ yarn add -D @svgr/webpack
 - グラフを書きたいので導入
 
 ```bash
-yarn add chart.js react-chartjs-2 chartjs-plugin-streaming
-yarn add date-fns chartjs-adapter-date-fns
+yarn add chart.js react-chartjs-2
 ```
 
 ### react-chart-js-2
 
 Chart.js を React.js 上で利用できるようにしたラッパーライブラリ
 
+[react-chartjs-2.js](https://react-chartjs-2.js.org/examples)
+
 ### Faker
+
+[Faker 公式](https://fakerjs.dev/guide/usage.html)
 
 ```bash
 yarn add @faker-js/faker --dev

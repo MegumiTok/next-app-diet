@@ -3,6 +3,8 @@ import Head from "next/head";
 
 // components------------------------
 import { Page } from "@/stories/Page";
+import LineChart from "@/stories/chart/LineChart";
+import DietList from "@/stories/DietList";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +19,10 @@ export default function Home() {
       </Head>
 
       <Page>
-        <p>hello</p>
+        <div className="w-4/5 m-auto">
+          <LineChart />
+          <DietList />
+        </div>
       </Page>
     </>
   );
