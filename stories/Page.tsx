@@ -1,6 +1,7 @@
 import { useState } from "react";
 // component---------
 import { Header } from "./Header";
+import { Footer } from "./Footer";
 //type--------------
 import type { User } from "@/types";
 
@@ -17,6 +18,8 @@ export const Page = () => {
       <section>
         <h2>◇◆タイトル◆◇</h2>
       </section>
+
+      <Footer />
     </article>
   );
 };
