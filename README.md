@@ -7,6 +7,10 @@ yarn build
 yarn lint
 ```
 
+- [x] storybook でコンポーネント管理
+- [ ] レスポンシブデザイン
+- [ ] テストを書く
+
 ## Install Tailwind CSS with Next.js
 
 ```bash
@@ -101,6 +105,29 @@ yarn add -D @svgr/webpack
 [Next.js における SVG ファイルの表示方法を考える](https://zenn.dev/toono_f/articles/bd50ddd0a7bc76)
 
 ※ 試そうと思いましたが storybook 側で反映させるのに別設定が必要っぽいのでひとまず保留
+
+## Chart.js
+
+- グラフを書きたいので導入
+
+```bash
+yarn add chart.js react-chartjs-2 chartjs-plugin-streaming
+yarn add date-fns chartjs-adapter-date-fns
+```
+
+### react-chart-js-2
+
+Chart.js を React.js 上で利用できるようにしたラッパーライブラリ
+
+### Faker
+
+```bash
+yarn add @faker-js/faker --dev
+```
+
+```jsx
+import { faker } from "@faker-js/faker";
+```
 
 ## その他使用する便利なライブラリ
 

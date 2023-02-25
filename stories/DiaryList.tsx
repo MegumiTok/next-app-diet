@@ -32,7 +32,7 @@ interface Type {
 }
 const Diary: React.FC<Type> = ({ diary }) => {
   return (
-    <div className="border-2 p-3 border-gray">
+    <div className="p-3 bg-white rounded-md ">
       <p>{diary.date}</p>
       <p>{diary.time}</p>
       <p>{diary.text}</p>
