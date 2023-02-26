@@ -6,7 +6,7 @@ import { Marker } from "./Marker";
 
 const DiaryList = () => {
   return (
-    <div>
+    <div className="my-10">
       <Marker text="日記" size={3} />
 
       <div className="grid grid-cols-4 gap-3">

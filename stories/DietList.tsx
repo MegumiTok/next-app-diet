@@ -1,12 +1,23 @@
 import Image from "next/image";
+
+// local data-------------------------------
 import DATA from "@/lib/local/diet.json";
+
+//component-------------------------------
+import { Button } from "./Button";
+
 const DietList = () => {
   return (
-    <div className="flex justify-center my-10">
-      <div className=" grid grid-cols-4 gap-4 ">
-        {DATA.map((post, id) => {
-          return <Post key={id} post={post} />;
-        })}
+    <div>
+      <div className="flex justify-center my-10">
+        <div className=" grid grid-cols-4 gap-4 ">
+          {DATA.map((post, id) => {
+            return <Post key={id} post={post} />;
+          })}
+        </div>
+      </div>
+      <div className="flex  justify-center">
+        <Button label="もっと見る" size="large" />
       </div>
     </div>
   );

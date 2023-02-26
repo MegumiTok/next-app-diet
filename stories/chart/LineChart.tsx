@@ -57,7 +57,7 @@ export const data = {
 
 const LineChart = () => {
   return (
-    <div className="mt-10 mr-10">
+    <div className="mt-10 mr-10 h-4/5">
       <Line options={options} data={data} />
     </div>
   );

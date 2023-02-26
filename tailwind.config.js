@@ -12,7 +12,7 @@ module.exports = {
       blue_500: "#3F51B5",
 
       gray_100: "#fafafa",
-      gray_200: "#f1f5f9",
+      gray_200: "#f1f5f9", //ボーダーライン
       gray_400: "#9CA3AF",
       gray_500: "#777777",
 
