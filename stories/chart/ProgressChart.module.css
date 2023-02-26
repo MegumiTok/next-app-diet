@@ -1,0 +1,7 @@
+.center {
+  position: absolute;
+  /* top: 50%; */
+  transform: translateY(-110%);
+  /* margin: 0 auto; */
+  width: 15%;
+} /*# sourceMappingURL=NavRecord.module.css.map */

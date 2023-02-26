@@ -5,6 +5,7 @@ import Head from "next/head";
 import { Page } from "@/stories/Page";
 import LineChart from "@/stories/chart/LineChart";
 import DietList from "@/stories/DietList";
+import ProgressChart from "@/stories/chart/ProgressChart ";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -19,8 +20,12 @@ export default function Home() {
       </Head>
 
       <Page>
-        <div className="w-4/5 m-auto">
-          <LineChart />
+        <div className="w-4/5 m-auto ">
+          <div className=" grid grid-cols-2 gap-4 mb-20">
+            <ProgressChart />
+            <LineChart />
+          </div>
+
           <DietList />
         </div>
       </Page>

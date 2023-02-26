@@ -30,7 +30,7 @@ export const options = {
     },
     title: {
       display: true,
-      text: "Chart.js Line Chart",
+      text: "運動の記録",
     },
   },
 };
@@ -56,7 +56,11 @@ export const data = {
 };
 
 const LineChart = () => {
-  return <Line options={options} data={data} />;
+  return (
+    <div className="mt-10 mr-10">
+      <Line options={options} data={data} />
+    </div>
+  );
 };
 
 export default LineChart;
