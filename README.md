@@ -132,6 +132,19 @@ yarn add @faker-js/faker --dev
 import { faker } from "@faker-js/faker";
 ```
 
+## Scroll
+
+```bash
+yarn add react-scroll
+yarn add -D @types/react-scroll
+```
+
+### Infinite Scroll
+
+```bash
+yarn add react-infinite-scroll-component
+```
+
 ## その他使用する便利なライブラリ
 
 ```bash
